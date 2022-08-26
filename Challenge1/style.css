@@ -1,68 +1,143 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-/*    width: 1280px;
-    height: 720px;*/
+img {
+  max-width: 100%;
 }
+
 body {
-    background: #d6bed1;
-
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 0.1px);
+  margin: 0 1.5rem;
 }
 
-.conteudo{
-    
-    background: #FFFFFF;
-    margin-top: 30%;
-    width: 800px;
-    height: 500px;
-    border: 1px solid #000000;
-    width: 50%;
-    margin: 0 auto;
-    position: relative;
+button, li {
+  font-family: inherit;
 }
 
-.imgdesktop {
-    display: inline-block;
-    width: 50%;
-    height: auto;
-}
-.produto {
-    background: #FFFFFF;
-    padding: 6%;
-    width: 40%;
-    height: 50%;
-    display: inline-block;
-    vertical-align: top;
-    text-align:left;
-}
-.perfume {
-    padding: 6%;
-}
 h1 {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 2%;
+  color: hsl(212, 21%, 14%);
 }
-.carrinho {
-    width: 80%;
-    padding: 3px;
-    margin: 20% 20%;
-}
-.carrinho {
 
-	padding: 2px 0;
-	background: green;
-	color: white;
-	font-size: 18px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+.preco {
+  color: hsl(158, 36%, 37%);
 }
-.txtcar {
-    margin: 2% auto;
+
+h1,
+.preco {
+  font-family: "Fraunces", sans-serif;
 }
-.igmcar {
-    padding: 10%;
+
+h2 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.8;
+}
+
+.conteudo {
+  max-width: 600px;
+}
+
+.conteudo h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.conteudo article:first-child img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.conteudo article:last-child {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  margin-top: -1rem;
+}
+
+.conteudo p {
+  margin-bottom: 2rem;
+}
+
+.conteudo ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.conteudo ul li:first-child {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.conteudo ul li:nth-child(2) {
+  color: hsl(228, 12%, 51%);
+}
+
+.conteudo .carrinho{
+  background-color: hsl(158, 36%, 37%);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.625rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo .carrinho:hover {
+  background-color: hsl(83, 58%, 55%);
+}
+
+.carrinho .carrinho img {
+  margin-right: 0.1rem;
+}
+.carrinho img{
+    height: 2%;
+}
+
+
+/*Responsividade*/
+@media (min-width: 650px) {
+  .conteudo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conteudo article:first-child img {
+    border-radius: 0.625rem 0 0 0.625rem;
+    width: 100%;
+  }
+
+  .conteudo article:last-child {
+    border-radius: 0 0.625rem 0.625rem 0;
+    margin-top: 0;
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  picture img {
+    height: 100%;
+  }
+
+  .conteudo .principal p {
+    margin-bottom: 1rem;
+  }
 }
